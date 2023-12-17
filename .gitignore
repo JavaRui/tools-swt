@@ -1,0 +1,42 @@
+HELP.md
+target/
+out/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**
+!**/src/test/**
+**/logs/**
+**/template/**
+logs/**
+*.json
+*.MF
+*.txt
+*.zip
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+bitable/bitable-1.0.61/
+
+### IntelliJ IDEA ###
+out
+.idea
+*.ipr
+*.iws
+*.iml
+atlassian-ide-plugin.xml
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+
+### VS Code ###
+.vscode/
+
