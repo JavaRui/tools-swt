@@ -1,7 +1,7 @@
 package com.endless.tools.swt.mgr;
 import java.io.File;
 
-import com.endless.tools.swt.base.LogFace;
+import com.endless.tools.swt.log.LogFace;
 import com.endless.tools.swt.base.SwtVoid;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.graphics.FontData;

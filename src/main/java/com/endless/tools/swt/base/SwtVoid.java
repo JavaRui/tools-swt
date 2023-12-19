@@ -1,4 +1,5 @@
 package com.endless.tools.swt.base;
+import com.endless.tools.swt.log.LogFace;
 import com.endless.tools.swt.util.INBack;
 import org.eclipse.swt.custom.SashForm;
 import org.eclipse.swt.dnd.Clipboard;

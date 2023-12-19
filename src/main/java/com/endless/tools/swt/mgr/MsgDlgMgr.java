@@ -1,5 +1,5 @@
 package com.endless.tools.swt.mgr;
-import com.endless.tools.swt.base.LogFace;
+import com.endless.tools.swt.log.LogFace;
 import org.eclipse.jface.dialogs.InputDialog;
 import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.jface.window.Window;

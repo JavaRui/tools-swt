@@ -4,7 +4,7 @@ import cn.hutool.core.date.DateTime;
 import cn.hutool.core.date.DateUtil;
 import cn.hutool.core.date.LocalDateTimeUtil;
 import cn.hutool.core.date.Week;
-import com.endless.tools.swt.base.LogFace;
+import com.endless.tools.swt.log.LogFace;
 import com.endless.tools.swt.base.ShellBack;
 import com.endless.tools.swt.base.SwtVoid;
 import com.endless.tools.swt.base.YtComposite;

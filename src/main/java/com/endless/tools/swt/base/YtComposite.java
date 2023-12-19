@@ -2,6 +2,7 @@ package com.endless.tools.swt.base;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.endless.tools.swt.log.LogFace;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.PaintEvent;
 import org.eclipse.swt.events.PaintListener;
@@ -179,7 +180,7 @@ public class YtComposite extends Composite {
 			@Override
 			public void paintControl(PaintEvent e) {
 				
-				afterInit();
+				afterPaint();
 				removePaintListener(this);
 			}
 		});
@@ -188,7 +189,7 @@ public class YtComposite extends Composite {
 	/**
 	 * 绘图事件执行的界面，可用于复写，在此方法执行的时候，所有的控件都将被分配了bound。可以直接设置bound
 	 */
-	protected void afterInit() {
+	protected void afterPaint() {
 		
 	}
 	/**

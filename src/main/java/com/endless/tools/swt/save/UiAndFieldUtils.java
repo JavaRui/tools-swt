@@ -5,7 +5,7 @@ import cn.hutool.core.util.ClassUtil;
 import cn.hutool.core.util.ReflectUtil;
 import cn.hutool.core.util.StrUtil;
 import com.alibaba.fastjson.JSONObject;
-import com.endless.tools.swt.base.LogFace;
+import com.endless.tools.swt.log.LogFace;
 import com.endless.tools.swt.base.SwtVoid;
 
 import java.lang.reflect.Field;

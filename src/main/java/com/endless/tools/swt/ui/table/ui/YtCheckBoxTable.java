@@ -3,7 +3,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import cn.hutool.core.util.ReflectUtil;
-import com.endless.tools.swt.base.LogFace;
+import com.endless.tools.swt.log.LogFace;
 import com.endless.tools.swt.ui.table.util.TableUtil;
 import com.endless.tools.swt.util.INBack;
 import org.eclipse.jface.viewers.CheckboxTableViewer;
