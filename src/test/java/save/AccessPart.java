@@ -1,9 +1,9 @@
 package save;
 
-import com.endless.tool.swt.base.YtComposite;
-import com.endless.tool.swt.save.UiAndField;
-import com.endless.tool.swt.save.UiCombo;
-import com.endless.tool.swt.ui.text.YtText;
+import com.endless.tools.swt.base.YtComposite;
+import com.endless.tools.swt.save.UiAndField;
+import com.endless.tools.swt.save.UiCombo;
+import com.endless.tools.swt.ui.text.YtText;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.SelectionAdapter;
 import org.eclipse.swt.events.SelectionEvent;

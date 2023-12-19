@@ -6,11 +6,11 @@ import java.util.Arrays;
 public class ReplaceAndSaveJava8 {
     public static void main(String[] args) {
         // 指定文件夹路径
-        String folderPath = "E:\\wu-kafka-client";
+        String folderPath = "E:\\IdeaProjects\\endless-kafka-client";
 
         // 替换字符串
-        String searchString = "bluemoon";
-        String replacementString = "wujin";
+        String searchString = "tool";
+        String replacementString = "tools";
 
         try {
             // 获取文件夹下所有的文件
