@@ -15,4 +15,8 @@ import static java.lang.annotation.ElementType.*;
 public @interface UiAndField {
     String getMethodName() default "";
     String setMethodName() default "";
+    /**
+     * 默认是以属性名为json的key，如果有特殊的key可以设置这个key();
+     * */
+    String key() default "";
 }

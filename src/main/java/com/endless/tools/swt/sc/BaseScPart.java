@@ -6,6 +6,7 @@ import org.eclipse.swt.SWT;
 import org.eclipse.swt.custom.ScrolledComposite;
 import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.widgets.Composite;
+import org.eclipse.swt.widgets.Widget;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,7 +15,7 @@ public  abstract class BaseScPart<T, K> extends YtComposite implements PartFace<
     private final ScrolledComposite sc;
     private  YtComposite content;
 
-    private List itemList;
+    private List<Widget> itemList;
 //    private  List<T> itemJsonList = new ArrayList<>();
 
     public BaseScPart(Composite parent, int border) {
@@ -45,12 +46,13 @@ public  abstract class BaseScPart<T, K> extends YtComposite implements PartFace<
 
     protected void createItems(List<T> input){
         input.forEach(o->{
-            createItem(content , o);
+            Widget widget = createItem(content , o);
+            itemList.add(widget);
 //            itemJsonList.add(o);
         });
     }
 
-    protected abstract void createItem(YtComposite comp, T o);
+    protected abstract Widget createItem(YtComposite comp, T o);
 
 
     protected void initContent(){
@@ -75,6 +77,8 @@ public  abstract class BaseScPart<T, K> extends YtComposite implements PartFace<
         super.layout();
     }
 
-
+    public List<Widget> getItemList(){
+        return itemList;
+    }
 
 }

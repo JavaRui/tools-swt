@@ -1,5 +1,6 @@
 package com.endless.tools.swt.log;
 
+import cn.hutool.core.date.DateUtil;
 import cn.hutool.core.io.FileUtil;
 import com.endless.tools.swt.base.SwtVoid;
 import com.endless.tools.swt.base.YtComposite;
@@ -13,12 +14,14 @@ import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Text;
 
+import java.util.Date;
+
 /**
  * 优先使用logFace的类，做输出，LogFace.log(xxxx)这样，这样可以兼容没有ui的情况
  * */
 public class SimpleLogComp extends YtComposite {
 
-    private static Text logText ;
+    private Text logText ;
 
     public SimpleLogComp(Composite parent, int style) {
         super(parent, style);
@@ -37,8 +40,25 @@ public class SimpleLogComp extends YtComposite {
 
     }
 
-    public static Text getLogText(){
+    public Text getLogText(){
         return logText;
+    }
+
+    public void setTextTime(String text){
+        String format = DateUtil.format(new Date(), "hh:mm:ss   ");
+        setText(format+text);
+    }
+    public void setText(String text){
+        logText.setText(text);
+    }
+
+    public void append(String text){
+//        String format = DateUtil.format(new Date(), "hh:mm:ss   ");
+        logText.append(text+"\n");
+    }
+    public void appendTime(String text){
+        String format = DateUtil.format(new Date(), "hh:mm:ss   ");
+        logText.append(format+text+"\n");
     }
 
     /**

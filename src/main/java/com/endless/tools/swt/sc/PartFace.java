@@ -8,7 +8,9 @@ public interface PartFace<T,K> {
     /**
      * 输入
      * */
-    void input(List<T> input);
+    default void input(List<T> input){
+
+    }
     /**
      * 输入
      * */

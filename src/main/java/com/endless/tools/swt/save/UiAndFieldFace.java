@@ -13,12 +13,7 @@ public interface UiAndFieldFace<T> {
     T output();
 
     static void addDispose(final Composite composite){
-        composite.addDisposeListener(new DisposeListener() {
-            @Override
-            public void widgetDisposed(DisposeEvent e) {
-                UiAndFieldUtils.save(composite);
-            }
-        });
+        composite.addDisposeListener((disposeEvent)->UiAndFieldUtils.save(composite));
     }
 
 

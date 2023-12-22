@@ -1,6 +1,7 @@
 package com.endless.tools.swt.log;
 
 import cn.hutool.core.date.DateUtil;
+import com.endless.tools.swt.base.SwtVoid;
 import org.eclipse.swt.widgets.Text;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -20,15 +21,17 @@ public  class LogFace {
     }
 
     static Text logText;
-    static void setLogText(Text logText){
+    public static void setLogText(Text logText){
         LogFace.logText = logText;
     }
 
-    static void log( Object log){
+    public static void log( Object log){
         String format = DateUtil.format(new Date(), "hh:mm:ss   ");
 
         if(LogFace.logText != null){
-            logText.setText(format+log+"");
+            SwtVoid.delayAsy(0,()->{
+                logText.setText(format+log+"");
+            });
         }
         else if(getLogger() != null){
             getLogger().info(log+"");
@@ -37,11 +40,13 @@ public  class LogFace {
         }
     }
 
-    static void log(Class<?> clsName, Object log){
+    public static void log(Class<?> clsName, Object log){
         String format = DateUtil.format(new Date(), "hh:mm:ss   ");
 
         if(LogFace.logText != null){
-            logText.setText(format+log+"");
+            SwtVoid.delayAsy(0,()->{
+                logText.setText(format+log+"");
+            });
         }
         else if(getLogger() != null){
             getLogger().info(clsName.toString(),log);
@@ -51,11 +56,13 @@ public  class LogFace {
     }
 
 
-    static void err( Object log){
+    public static void err( Object log){
         String format = DateUtil.format(new Date(), "hh:mm:ss   ");
 
         if(LogFace.logText != null){
-            logText.setText(format+log+"");
+            SwtVoid.delayAsy(0,()->{
+                logText.setText(format+log+"");
+            });
         }
         else if(getLogger() != null){
             getLogger().error(log+"");
@@ -64,11 +71,13 @@ public  class LogFace {
         }
     }
 
-    static void err(Class<?> clsName, Object log){
+    public static void err(Class<?> clsName, Object log){
         String format = DateUtil.format(new Date(), "hh:mm:ss   ");
 
         if(LogFace.logText != null){
-            logText.setText(format+log+"");
+            SwtVoid.delayAsy(0,()->{
+                logText.setText(format+log+"");
+            });
         }
         else if(getLogger() != null){
             getLogger().error(clsName.toString(),log);

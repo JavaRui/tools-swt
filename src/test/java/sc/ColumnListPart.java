@@ -7,6 +7,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.widgets.Composite;
+import org.eclipse.swt.widgets.Widget;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -40,7 +41,7 @@ public class ColumnListPart extends BaseScPart<ColumnVo, List<ColumnVoUi>> imple
     }
 
     @Override
-    protected void createItem(YtComposite contentParent , ColumnVo vo) {
+    protected Widget createItem(YtComposite contentParent , ColumnVo vo) {
         Col2RowItem col2RowItem = new Col2RowItem(contentParent,vo);
         col2RowItem.setGd(true,false);
         col2RowItem.input(vo);
@@ -49,7 +50,9 @@ public class ColumnListPart extends BaseScPart<ColumnVo, List<ColumnVoUi>> imple
         col2RowItem.setLayoutData(gd);
 
         columnItemList.add(col2RowItem);
+        return col2RowItem;
     }
+
 
 
 }

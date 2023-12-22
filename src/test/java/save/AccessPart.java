@@ -23,7 +23,7 @@ public class AccessPart extends YtComposite implements Runnable{
     @UiAndField(getMethodName = "getText",setMethodName = "setText")
     private YtText accessTokenText;
 
-    @UiAndField(getMethodName = "getText",setMethodName = "setText")
+    @UiAndField(getMethodName = "getText",setMethodName = "setText" , key="appToken")
     private YtText appTokenText;
 
 //    @UiAndField(getMethodName = "getText",setMethodName = "setText")

@@ -27,7 +27,7 @@ public class UiAndFieldUtils {
             if(fieldValue == null){
                 continue;
             }
-            String name = field.getName();
+            String name = getUiAndFieldKey(field);
             //如果只是属性
             String outputMethodName = getOutputMethodName(field);
             if(StrUtil.isNotBlank(outputMethodName)) {
@@ -61,7 +61,8 @@ public class UiAndFieldUtils {
     public static void setJson2Ui(Object uiObj , JSONObject jsonObject){
         Field[] fields = ReflectUtil.getFields(uiObj.getClass());
         for (Field field : fields) {
-            String name = field.getName();
+            String name = getUiAndFieldKey(field);
+
             Object o = jsonObject.get(name);
             Object fieldValue = ReflectUtil.getFieldValue(uiObj, field);
             if(fieldValue == null){
@@ -133,4 +134,19 @@ public class UiAndFieldUtils {
 
         return null;
     }
+    /**
+     * 获取存储的key，如果uiAndField没有设置key，那么则返回field.getName
+     * */
+    public static String getUiAndFieldKey(Field field){
+        UiAndField annotation = field.getAnnotation(UiAndField.class);
+        if(annotation == null){
+            return field.getName();
+        }
+        if(StrUtil.isBlank(annotation.key())){
+            return field.getName();
+        }else{
+            return annotation.key();
+        }
+    }
+
 }

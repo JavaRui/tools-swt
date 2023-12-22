@@ -84,6 +84,19 @@ public class YtText extends Text{
 		GridData gd = new GridData(SWT.FILL, SWT.FILL, hor, ver);
 		setLayoutData(gd);
 	}
+
+	public Integer getIntText(){
+		return Integer.valueOf(getText());
+	}
+	public Double getDoubleText(){
+		return Double.valueOf(getText());
+	}
+	public Float getFloatText(){
+		return Float.valueOf(getText());
+	}
+	public Boolean getBooleanText(){
+		return Boolean.valueOf(getText());
+	}
 	
 	
 }

@@ -29,10 +29,13 @@ import java.time.LocalDate;
 import java.util.Date;
 
 public class Excel2Main extends YtComposite {
-    @UiAndField(getMethodName = "getText",setMethodName = "setText")
+    @UiAndField(getMethodName = "getText",setMethodName = "setText" ,key = "out")
     YtText outText;
     @UiAndField(getMethodName = "getText",setMethodName = "setText")
     YtText inputText;
+
+    @UiAndField(getMethodName = "getText",setMethodName = "setText")
+    YtText qqqText;
 
 
     @UiAndClass
